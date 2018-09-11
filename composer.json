@@ -1,0 +1,22 @@
+{
+    "name": "abhijitrakas/wp-cli-notificaton",
+    "description": "Package extend default cli notification and add functionality to show desktop notification.",
+    "type": "metapackage",
+    "require": {
+        "php": ">=5.4",
+        "jolicode/jolinotif": "1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WP_CLI_Notification\\": "src/"
+        },
+        "files": [ "wpcli-notification.php" ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abhijit Rakas",
+            "email": "abhijitrakas@gmail.com"
+        }
+    ]
+}
