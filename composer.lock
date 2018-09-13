@@ -4,34 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6112c5d10b81479f826b66381fb83514",
+    "content-hash": "5ee485d4e1aa8f11f4b815e0469017fa",
     "packages": [
         {
             "name": "jolicode/jolinotif",
-            "version": "v1.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jolicode/JoliNotif.git",
-                "reference": "a812db822343fe5788cbed75c61ddc7a0eedeb69"
+                "reference": "105da615c0c4224b4b5cff1fe81a69f718574d8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jolicode/JoliNotif/zipball/a812db822343fe5788cbed75c61ddc7a0eedeb69",
-                "reference": "a812db822343fe5788cbed75c61ddc7a0eedeb69",
+                "url": "https://api.github.com/repos/jolicode/JoliNotif/zipball/105da615c0c4224b4b5cff1fe81a69f718574d8b",
+                "reference": "105da615c0c4224b4b5cff1fe81a69f718574d8b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "symfony/process": "~2.6"
+                "symfony/process": "~2.3|~3.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "~1.5",
-                "phpunit/phpunit": "~4.5"
+                "friendsofphp/php-cs-fixer": "~2.0",
+                "phpunit/phpunit": "~4.8.35"
             },
+            "bin": [
+                "jolinotif"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -57,29 +60,29 @@
                 "notification",
                 "windows"
             ],
-            "time": "2015-03-20T15:06:41+00:00"
+            "time": "2018-01-25T11:14:02+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.45",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "4be278e19064c3492095de50c9e375caae569ae1"
+                "reference": "01383ed02a1020759bc8ee5d975fcec04ba16fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/4be278e19064c3492095de50c9e375caae569ae1",
-                "reference": "4be278e19064c3492095de50c9e375caae569ae1",
+                "url": "https://api.github.com/repos/symfony/process/zipball/01383ed02a1020759bc8ee5d975fcec04ba16fbf",
+                "reference": "01383ed02a1020759bc8ee5d975fcec04ba16fbf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -106,7 +109,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-03T09:45:57+00:00"
+            "time": "2015-11-30T12:36:17+00:00"
         }
     ],
     "packages-dev": [],
