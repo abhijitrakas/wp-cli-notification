@@ -3,8 +3,7 @@ Desktop notification for WP CLI
 
 ## Installation
 
-Donwload zip and run
-`wp package install <package-path>`
+`wp package install git@github.com:abhijitrakas/wp-cli-notification.git`
 
 ## Screenshot
 
