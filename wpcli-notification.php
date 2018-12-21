@@ -5,7 +5,7 @@
  * @package WP CLI Notification Logger
  */
 
-// If WP_CLI class or set_looger method not found then return.
+// If WP_CLI class or set_logger method not found then return.
 if ( ! class_exists( 'WP_CLI' ) || ! method_exists( 'WP_CLI', 'set_logger' ) ) {
 	return;
 }
