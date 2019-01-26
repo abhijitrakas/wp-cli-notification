@@ -1,5 +1,5 @@
 {
-    "name": "wp-cli/wp-cli-notificaton",
+    "name": "abhijitrakas/wp-cli-notification",
     "description": "Package extend default cli notification and add functionality to show desktop notification.",
     "type": "wp-cli-package",
     "require": {
