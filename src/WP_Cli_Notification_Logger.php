@@ -121,7 +121,8 @@ class WP_Cli_Notification_Logger extends Base {
 		$notification
 					->setTitle( $title )
 					->setBody( $message )
-					->setIcon( __DIR__ . '/assets/images/wp-cli-logo.png' );
+					->setIcon( __DIR__ . '/assets/images/wp-cli-logo.png' )
+					->addOption('sound', 'Frog');
 
 		// Fire Display notification command.
 		$notifier->send( $notification );
