@@ -10,13 +10,15 @@ if ( ! class_exists( 'WP_CLI' ) || ! method_exists( 'WP_CLI', 'set_logger' ) ) {
 	return;
 }
 
-$autoload = dirname( __FILE__ ) . '/vendor/autoload.php';
+$wpcli_notifiation_autoloader = dirname( __FILE__ ) . '/vendor/autoload.php';
 
-if ( file_exists( $autoload ) ) {
-	require_once $autoload;
+if ( file_exists( $wpcli_notifiation_autoloader ) ) {
+	require_once $wpcli_notifiation_autoloader;
 }
 
-// Creating object of Extended logger class.
-$wp_cli_notification_logger = new WP_Cli_Notification_Logger( true );
+use \WP_CLI\Notification\Logger;
 
-WP_CLI::set_logger( $wp_cli_notification_logger );
+// Creating object of Extended logger class.
+$wpcli_notification_logger = new Logger( true );
+
+WP_CLI::set_logger( $wpcli_notification_logger );

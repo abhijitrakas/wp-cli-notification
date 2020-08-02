@@ -1,23 +1,49 @@
 {
     "name": "abhijitrakas/wp-cli-notification",
-    "description": "Package extend default cli notification and add functionality to show desktop notification.",
+    "description": "Package extends default WP-CLI notification functionality to show desktop notifications",
     "type": "wp-cli-package",
+    "homepage": "https://github.com/abhijitrakas/wp-cli-notification",
     "require": {
-        "php": ">=5.4",
-        "jolicode/jolinotif": "1.3.0",
-        "symfony/process": "3.0.0"
+        "php": ">=7.0",
+        "jolicode/jolinotif": "^2.2.0",
+        "symfony/process": "^3.3.0",
+        "wp-cli/wp-cli": "^2.4"
+    },
+    "require-dev": {
+        "wp-cli/wp-cli-tests": "^2.1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "process-timeout": 7200,
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "WP_CLI\\Notification\\": "src/"
         },
-        "files": [ "wpcli-notification.php" ]
+        "files": [
+            "wpcli-notification.php"
+        ]
     },
     "license": "MIT",
+    "scripts": {
+        "lint": "run-linter-tests",
+        "phpcs": "run-phpcs-tests",
+        "phpcbf": "./vendor/bin/phpcbf",
+        "test": [
+            "@lint",
+            "@phpcs",
+            "@phpcbf"
+        ]
+    },
     "authors": [
         {
             "name": "Abhijit Rakas",
             "email": "abhijitrakas@gmail.com"
         }
-    ]
+    ],
+    "support": {
+        "issues": "https://github.com/abhijitrakas/wp-cli-notification/issues"
+    }
 }

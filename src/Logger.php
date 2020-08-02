@@ -1,9 +1,11 @@
 <?php
 /**
- * File to load custom logger for WP CLI.
+ * File to load custom logger for WP-CLI.
  *
- * @package WP CLI Notification Logger
+ * @package WP-CLI Notification Logger
  */
+
+namespace WP_CLI\Notification;
 
 use Joli\JoliNotif\Notification;
 use Joli\JoliNotif\NotifierFactory;
@@ -12,7 +14,7 @@ use WP_CLI\Loggers\Base;
 /**
  * Extend default logger to display Desktop notification.
  */
-class WP_Cli_Notification_Logger extends Base {
+class Logger extends Base {
 
 	/**
 	 * Constructor to set default settings.
@@ -70,13 +72,13 @@ class WP_Cli_Notification_Logger extends Base {
 	/**
 	 * Similar to error( $message ), but outputs $message in a red box
 	 *
-	 * @param  array $message_lines Message to write.
+	 * @param array $message_lines Message to write.
 	 */
 	public function error_multi_line( $message_lines ) {
 
 		// convert tabs to four spaces, as some shells will output the tabs as variable-length.
 		$message_lines = array_map(
-			function( $line ) {
+			function ( $line ) {
 				return str_replace( "\t", '    ', $line );
 			},
 			$message_lines
@@ -119,10 +121,10 @@ class WP_Cli_Notification_Logger extends Base {
 		$notification = new Notification();
 
 		$notification
-					->setTitle( $title )
-					->setBody( $message )
-					->setIcon( __DIR__ . '/assets/images/wp-cli-logo.png' )
-					->addOption('sound', 'Frog');
+			->setTitle( $title )
+			->setBody( $message )
+			->setIcon( __DIR__ . '/assets/images/wp-cli-logo.png' )
+			->addOption( 'sound', 'Frog' );
 
 		// Fire Display notification command.
 		$notifier->send( $notification );
